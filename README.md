@@ -57,3 +57,8 @@ spec:
     port: 8002
     targetPort: 8000
  ```
+
+Verify load balancing by running multiple instance of:
+```shell
+curl -s "http://127.0.0.1:8002/?[1-10]"
+```
