@@ -1,6 +1,5 @@
 # Kubernetes Introduction
-An introduction to Kubernetes, assuming you are running a local Kubernetes cluster on Windows 10 (Docker Desktop)
-
+An introduction to Kubernetes, assuming you are running a local Kubernetes cluster.
 ## Dashboard
 Apply the dashboard:
 ```shell
