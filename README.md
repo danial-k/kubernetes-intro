@@ -42,7 +42,7 @@ spec:
         - containerPort: 8000
  ```
  
-This will create a replication set with precisely 3 pods maintained.  To expose the pods as a load balanced externally available service, create the following: 
+This will create a replication set with 3 pods maintained.  To expose the pods as a load balanced externally available service, create the following: 
  ```yaml
 apiVersion: v1
 kind: Service
