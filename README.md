@@ -10,6 +10,16 @@ kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/master/a
  kubectl proxy
  ```
  
+ Explore the API (download ```swagger.json``` from http://127.0.0.1/swagger.json):
+ ```shell
+docker run \
+--name redoc-api-k8s \
+-p 9001:80 \
+--mount type=bind,src=`pwd`/swagger.json,dst=/usr/share/nginx/html/swagger.json \
+-e SPEC_URL='swagger.json' \
+redocly/redoc
+ ```
+ 
  Extract bearer token for web login:
  ```shell
  kubectl -n kube-system describe secret $(kubectl -n kube-system get secret | grep kubernetes-dashboard-token | awk '{print $1}')
